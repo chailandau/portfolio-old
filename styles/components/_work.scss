@@ -1,0 +1,9 @@
+.work {
+    &-indiv {
+        margin-top: rem(60);
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

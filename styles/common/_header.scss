@@ -1,0 +1,44 @@
+header {
+    padding: rem(30) 0;
+    position: relative;
+    &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $black;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .logo {
+        height: rem(40);
+        width: auto;
+        path {
+            fill: $blurple;
+        }
+    }
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            li {
+                @include neue-montreal-medium;
+                text-transform: uppercase;
+                @include font(20, 0, 30);
+                & + li {
+                    margin-left: rem(40);
+                }
+            }
+        }
+    }
+}
