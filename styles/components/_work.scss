@@ -4,6 +4,38 @@
         .header {
             display: flex;
             justify-content: space-between;
+            margin-bottom: rem(40);
+        }
+        .image {
+            width: 100%;
+            border-top: rem(50) solid $dark-grey;
+            box-shadow: rem(3) rem(3) rem(20) 0 rgba(0, 0, 0, 0.15);
+            position: relative;
+            border-radius: rem(25) rem(25) rem(12) rem(12);
+
+            &:before {
+                display: block;
+                position: absolute;
+                content: "";
+                top: rem(-30);
+                left: rem(30);
+                width: rem(13);
+                height: rem(13);
+                border-radius: 50%;
+                background-color: $red;
+                box-shadow: 0 0 0 rem(1) $red, rem(25) 0 0 rem(1) $yellow, rem(50) 0 0 rem(1) $green;
+            }
+            > span {
+                position: unset !important;
+            }
+
+            img {
+                object-fit: contain;
+                width: 100% !important;
+                position: relative !important;
+                height: unset !important;
+                border-radius: rem(0) rem(0) rem(12) rem(12);
+            }
         }
     }
 }

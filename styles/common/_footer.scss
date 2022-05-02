@@ -1,0 +1,21 @@
+footer {
+    padding: rem(35) 0;
+    margin-top: rem(100);
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: $black;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}

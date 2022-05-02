@@ -1,6 +1,6 @@
 const Menu = () => {
     return (
-        <>
+        <div className="menu">
             <nav>
                 <ul>
                     <li>Work</li>
@@ -8,7 +8,7 @@ const Menu = () => {
                     <li>Contact</li>
                 </ul>
             </nav>
-        </>
+        </div>
     );
 };
 
