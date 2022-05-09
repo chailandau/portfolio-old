@@ -24,4 +24,10 @@ header {
             fill: $blurple;
         }
     }
+    .menu {
+        display: none;
+        @include desktop-sm {
+            display: block;
+        }
+    }
 }

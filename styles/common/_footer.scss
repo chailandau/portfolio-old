@@ -18,4 +18,10 @@ footer {
         justify-content: space-between;
         align-items: baseline;
     }
+    .menu {
+        display: none;
+        @include desktop-sm {
+            display: block;
+        }
+    }
 }

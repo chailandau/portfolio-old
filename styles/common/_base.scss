@@ -6,21 +6,34 @@ html {
 
 .wrapper {
     max-width: rem(1440);
-    padding: 0 rem(100);
+    padding: 0 rem(25);
     margin: auto;
+    @include desktop-sm {
+        padding: 0 rem(100);
+    }
 }
 
 // fonts
 
 .title {
     &-sm {
-        @include font(30, 0, 36);
+        @include font(25, 0, 30);
+        @include desktop-sm {
+            @include font(30, 0, 36);
+        }
     }
     &-md {
-        @include font(50, 0, 60);
+        @include font(32, 0, 38);
+
+        @include desktop-sm {
+            @include font(50, 0, 60);
+        }
     }
     &-lg {
-        @include font(100, 0, 103);
+        @include font(45, 0, 48);
+        @include desktop-sm {
+            @include font(100, 0, 103);
+        }
         & + .title-lg {
             margin-top: rem(50);
         }
