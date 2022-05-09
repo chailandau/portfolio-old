@@ -1,16 +1,9 @@
 header {
     padding: rem(30) 0;
     position: relative;
+    @include after-line;
     &:after {
-        display: block;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: rem(1);
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        background: $black;
+        z-index: 9999;
     }
     .wrapper {
         display: flex;
@@ -18,16 +11,14 @@ header {
         align-items: baseline;
     }
     .logo {
-        height: rem(40);
+        height: rem(35);
         width: auto;
+        z-index: 9999;
         path {
             fill: $blurple;
         }
-    }
-    .menu {
-        display: none;
-        @include desktop-sm {
-            display: block;
+        @include laptop {
+            height: rem(40);
         }
     }
 }

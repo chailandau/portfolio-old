@@ -1,19 +1,129 @@
 .menu {
     nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $white;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        padding: rem(125) rem(25) 0 rem(25);
+        @include laptop {
+            position: unset;
+            left: unset;
+            top: unset;
+            width: unset;
+            height: unset;
+            background-color: unset;
+            z-index: unset;
+            padding: unset;
+        }
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            justify-content: space-between;
+            @include laptop {
+                display: flex;
+                justify-content: space-between;
+            }
             li {
                 @include neue-montreal-medium;
                 text-transform: uppercase;
-                @include font(20, 0, 30);
+                @include font(45, 2, 68);
+                position: relative;
+                @include after-line;
+                margin: 0 rem(-25);
+                padding: 0 rem(25) rem(25) rem(25);
+                @include laptop {
+                    @include font(20, 0, 30);
+                    position: unset;
+                    margin: unset;
+                    padding: unset;
+                    &:before {
+                        display: none;
+                    }
+                }
                 & + li {
-                    margin-left: rem(40);
+                    margin-top: rem(40);
+                    @include laptop {
+                        margin-left: rem(40);
+                        margin-top: 0;
+                    }
                 }
             }
+        }
+    }
+    // mobile menu toggle
+    &-toggle {
+        display: block;
+        position: absolute;
+        top: rem(38);
+        right: rem(24);
+        width: rem(48);
+        height: rem(19);
+        z-index: 9999;
+        @include laptop {
+            display: none;
+        }
+        span {
+            &.line {
+                display: block;
+                width: 100%;
+                height: rem(1);
+                position: absolute;
+                transform: translateY(0) rotate(0deg);
+                transition: all 400ms ease-in-out;
+                background-color: $black;
+                &.top {
+                    top: 0;
+                }
+                &.middle {
+                    top: rem(9);
+                }
+                &.bottom {
+                    bottom: 0;
+                }
+            }
+        }
+        &:focus {
+            outline: rem(5) auto Highlight;
+            outline: -webkit-focus-ring-color auto rem(5);
+            outline-offset: rem(2);
+        }
+    }
+}
+
+header {
+    .menu {
+        nav {
+            display: none;
+            @include laptop {
+                display: block;
+            }
+        }
+    }
+}
+
+html.nav-open {
+    overflow: hidden;
+    header {
+        .menu-toggle {
+            span {
+                &.line {
+                    &.top {
+                        transform: translateY(8px) rotate(24deg);
+                    }
+                    &.middle {
+                        opacity: 0;
+                    }
+                    &.bottom {
+                        transform: translateY(-10px) rotate(-24deg);
+                    }
+                }
+            }
+        }
+        nav {
+            display: block;
         }
     }
 }

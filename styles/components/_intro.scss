@@ -1,6 +1,6 @@
 .intro {
     padding: rem(50) 0;
-    @include desktop-sm {
+    @include laptop {
         padding: rem(100) 0;
     }
 }

@@ -31,6 +31,36 @@ $rem: 16;
     }
 }
 
+// before element line
+@mixin before-line {
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: $black;
+    }
+}
+
+// after element line
+@mixin after-line {
+    &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(1);
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $black;
+    }
+}
+
 // media queries
 
 @mixin tablet {

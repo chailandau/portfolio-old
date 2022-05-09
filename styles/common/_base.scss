@@ -8,7 +8,7 @@ html {
     max-width: rem(1440);
     padding: 0 rem(25);
     margin: auto;
-    @include desktop-sm {
+    @include laptop {
         padding: 0 rem(100);
     }
 }
@@ -18,20 +18,20 @@ html {
 .title {
     &-sm {
         @include font(25, 0, 30);
-        @include desktop-sm {
+        @include laptop {
             @include font(30, 0, 36);
         }
     }
     &-md {
         @include font(32, 0, 38);
 
-        @include desktop-sm {
+        @include laptop {
             @include font(50, 0, 60);
         }
     }
     &-lg {
         @include font(45, 0, 48);
-        @include desktop-sm {
+        @include laptop {
             @include font(100, 0, 103);
         }
         & + .title-lg {
