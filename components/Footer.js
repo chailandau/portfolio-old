@@ -1,3 +1,5 @@
+import Nav from "./Nav";
+
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
@@ -5,13 +7,7 @@ const Footer = () => {
             <div className="wrapper">
                 <div className="copyright">Copyright © Chai Landau {currentYear}</div>
                 <div className="menu">
-                    <nav>
-                        <ul>
-                            <li>Work</li>
-                            <li>About</li>
-                            <li>Contact</li>
-                        </ul>
-                    </nav>
+                    <Nav />
                 </div>
             </div>
         </footer>

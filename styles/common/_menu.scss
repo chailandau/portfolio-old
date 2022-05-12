@@ -1,4 +1,10 @@
 .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    button.logo-btn {
+        z-index: 99999;
+    }
     nav {
         position: absolute;
         left: 0;
@@ -31,7 +37,7 @@
                 text-transform: uppercase;
                 @include font(45, 2, 68);
                 position: relative;
-                @include after-line;
+
                 margin: 0 rem(-25);
                 padding: 0 rem(25) rem(25) rem(25);
                 @include laptop {

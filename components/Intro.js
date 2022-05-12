@@ -2,8 +2,10 @@ const Intro = () => {
     return (
         <div className="intro">
             <div className="wrapper">
-                <p className="title-lg">Hi, I’m Chai.</p>
-                <p className="title-lg">I’m a front-end engineer with a background in design.</p>
+                <span className="title-lg">Hi, I’m Chai.</span>
+                <span className="title-lg">
+                    I’m a front-end engineer with a background in design.
+                </span>
             </div>
         </div>
     );

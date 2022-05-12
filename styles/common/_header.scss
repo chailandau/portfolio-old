@@ -5,11 +5,7 @@ header {
     &:after {
         z-index: 9999;
     }
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-    }
+
     .logo {
         height: rem(35);
         width: auto;

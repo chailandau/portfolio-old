@@ -3,7 +3,7 @@ import WorkIndiv from "./WorkIndiv";
 
 const Work = () => {
     return (
-        <div className="work">
+        <div className="work" id="work">
             <Title text="Recent Work" />
             <div className="wrapper">
                 <WorkIndiv

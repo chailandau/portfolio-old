@@ -40,6 +40,11 @@ html {
     }
 }
 
+p {
+    @include neue-montreal;
+    @include font(25, 0, 35);
+}
+
 .tag {
     @include font(20, 0, 24);
     text-transform: uppercase;

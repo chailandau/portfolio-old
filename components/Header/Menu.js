@@ -1,4 +1,17 @@
 import { useState, useEffect } from "react";
+import FocusTrap from "focus-trap-react";
+import Nav from "../Nav";
+import Logo from "./Logo";
+
+const Scroll = require("react-scroll");
+const scroll = Scroll.animateScroll;
+
+const scrollTop = () => {
+    // include this so it works with ssr
+    if (typeof window !== "undefined") {
+        scroll.scrollToTop({ duration: 750 });
+    }
+};
 
 const Menu = () => {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -8,6 +21,8 @@ const Menu = () => {
     };
 
     useEffect(() => {
+        const mobileBreakpoint = window.matchMedia("(max-width: 1199px)");
+
         let html = document.querySelector("html");
         let menuLinks = document.querySelectorAll("header nav > ul > li > a");
 
@@ -27,23 +42,33 @@ const Menu = () => {
         } else {
             html.classList.remove("nav-open");
         }
+
+        window.addEventListener("resize", () => {
+            setTimeout(() => {
+                // remove nav open and reset state on resize
+                if (hamburgerOpen && !mobileBreakpoint.matches) {
+                    closeMenu();
+                }
+            }, 200);
+        });
     }, [hamburgerOpen]);
 
     return (
-        <div className="menu">
-            <button className="menu-toggle" onClick={toggleHamburger}>
-                <span className="top line"></span>
-                <span className="middle line"></span>
-                <span className="bottom line"></span>
-            </button>
-            <nav>
-                <ul>
-                    <li>Work</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </div>
+        <>
+            <FocusTrap active={hamburgerOpen}>
+                <div className="menu">
+                    <button className="logo-btn" onClick={scrollTop}>
+                        <Logo />
+                    </button>
+                    <button className="menu-toggle" onClick={toggleHamburger}>
+                        <span className="top line"></span>
+                        <span className="middle line"></span>
+                        <span className="bottom line"></span>
+                    </button>
+                    <Nav />
+                </div>
+            </FocusTrap>
+        </>
     );
 };
 
