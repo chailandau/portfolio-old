@@ -5,9 +5,16 @@ import About from "../components/About";
 const Home = () => {
     return (
         <>
-            <Intro />
-            <Work />
-            <About />
+            <section id="intro">
+                <Intro />
+            </section>
+            <section id="work">
+                <Work />
+            </section>
+
+            <section id="about">
+                <About />
+            </section>
         </>
     );
 };

@@ -32,14 +32,16 @@ const WorkIndiv = (props) => {
 
     return (
         <div className="work-indiv">
-            <div className="info">
-                <h3 className="title-sm">{props.title}</h3>
-                {!mobile ? <button className="tag">{props.button}</button> : null}
+            <div className="wrapper">
+                <div className="info">
+                    <h3 className="title-sm">{props.title}</h3>
+                    {!mobile ? <button className="tag">{props.button}</button> : null}
+                </div>
+                <div className="image" style={browserWindowStyle}>
+                    <Image src={props.img} alt={props.alt} layout="fill" />
+                </div>
+                {mobile ? <button className="tag">{props.button}</button> : null}
             </div>
-            <div className="image" style={browserWindowStyle}>
-                <Image src={props.img} alt={props.alt} layout="fill" />
-            </div>
-            {mobile ? <button className="tag">{props.button}</button> : null}
         </div>
     );
 };

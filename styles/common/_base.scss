@@ -42,7 +42,10 @@ html {
 
 p {
     @include neue-montreal;
-    @include font(25, 0, 35);
+    @include font(20, 0, 32);
+    @include laptop {
+        @include font(25, 0, 37);
+    }
 }
 
 .tag {
@@ -51,3 +54,6 @@ p {
 }
 
 // misc
+section {
+    position: relative;
+}

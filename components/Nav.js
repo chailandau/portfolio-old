@@ -1,44 +1,15 @@
-import { Link } from "react-scroll";
-
 const Nav = () => {
     return (
         <nav>
             <ul>
                 <li>
-                    <Link
-                        href={"#work"}
-                        to="work"
-                        smooth={true}
-                        offset={1}
-                        duration={750}
-                        hashSpy={true}
-                    >
-                        Work
-                    </Link>
+                    <a href="#work">Work</a>
                 </li>
                 <li>
-                    <Link
-                        href={"#about"}
-                        to="about"
-                        smooth={true}
-                        offset={1}
-                        duration={750}
-                        hashSpy={true}
-                    >
-                        About
-                    </Link>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <Link
-                        href={"#contact"}
-                        to="contact"
-                        smooth={true}
-                        offset={1}
-                        duration={750}
-                        hashSpy={true}
-                    >
-                        Contact
-                    </Link>
+                    <a href="mailto:chai.landau@gmail.com">Contact</a>
                 </li>
             </ul>
         </nav>

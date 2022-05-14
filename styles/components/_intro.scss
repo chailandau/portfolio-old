@@ -1,8 +1,10 @@
 .intro {
     padding: rem(50) 0;
-    height: calc(100vh - 110px);
     display: flex;
     align-items: center;
+    @include laptop {
+        height: calc(100vh - 110px);
+    }
     span {
         display: block;
     }
