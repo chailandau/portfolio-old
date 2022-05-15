@@ -38,7 +38,7 @@ const WorkIndiv = (props) => {
                     {!mobile ? <button className="tag">{props.button}</button> : null}
                 </div>
                 <div className="image" style={browserWindowStyle}>
-                    <Image src={props.img} alt={props.alt} layout="fill" />
+                    <Image src={props.img} alt={props.alt} width={1440} height={950} />
                 </div>
                 {mobile ? <button className="tag">{props.button}</button> : null}
             </div>
