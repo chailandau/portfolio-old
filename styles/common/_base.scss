@@ -30,12 +30,12 @@ html {
         }
     }
     &-lg {
-        @include font(45, 0, 48);
+        @include font(45, 0, 50);
         @include laptop {
-            @include font(100, 0, 103);
+            @include font(100, 0, 110);
         }
         & + .title-lg {
-            margin-top: rem(50);
+            margin-top: rem(55);
         }
     }
 }
