@@ -2,7 +2,6 @@ footer {
     padding: rem(35) 0;
     margin-top: rem(100);
     position: relative;
-    @include before-line;
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -12,6 +11,13 @@ footer {
         display: none;
         @include laptop {
             display: block;
+        }
+        nav > ul > li > a {
+            padding: rem(37) rem(5) rem(15) rem(5);
+            &:after {
+                bottom: unset;
+                top: 0;
+            }
         }
     }
 }

@@ -26,19 +26,19 @@ const WorkIndiv = (props) => {
         });
     }, [mobile]);
 
-    const browserWindowStyle = {
-        borderTopColor: `${props.color}`,
+    const backgroundColor = {
+        backgroundColor: `${props.color}`,
     };
 
     return (
-        <div className="work-indiv">
+        <div className="work-indiv" style={backgroundColor}>
             <div className="wrapper">
                 <div className="info">
                     <h3 className="title-sm">{props.title}</h3>
                     {!mobile ? <button className="tag">{props.button}</button> : null}
                 </div>
-                <div className="image" style={browserWindowStyle}>
-                    <Image src={props.img} alt={props.alt} width={1440} height={950} />
+                <div className="image">
+                    <Image src={props.img} alt={props.alt} width={1440} height={615} />
                 </div>
                 {mobile ? <button className="tag">{props.button}</button> : null}
             </div>

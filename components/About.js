@@ -26,7 +26,7 @@ const About = () => {
                     <p>
                         I love creating functional and beautiful websites, and I am currently a
                         frontend engineer over at{" "}
-                        <a href="https://cliquestudios.com/" target="_blank">
+                        <a href="https://cliquestudios.com/" target="_blank" rel="noreferrer">
                             Clique Studios
                         </a>
                         .
@@ -34,15 +34,27 @@ const About = () => {
 
                     <p>
                         When I’m not off in the land of code, I love to{" "}
-                        <a href="https://www.instagram.com/chaitea_crafts/" target="_blank">
+                        <a
+                            href="https://www.instagram.com/chaitea_crafts/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             sew and craft
                         </a>
                         . I make my own clothing and I make things for my{" "}
-                        <a href="https://www.instagram.com/warren_the_noodlenose/" target="_blank">
+                        <a
+                            href="https://www.instagram.com/warren_the_noodlenose/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             super cute dog, Warren
                         </a>
                         . I also have two cats,{" "}
-                        <a href="https://www.instagram.com/harvey_and_athena/" target="_blank">
+                        <a
+                            href="https://www.instagram.com/harvey_and_athena/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             Harvey and Athena
                         </a>
                         , although they tolerate my sewing a lot less nicely than the dog.

@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import dynamic from "next/dynamic";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { SplitText } from "gsap/dist/SplitText";
@@ -7,12 +6,12 @@ import { SplitText } from "gsap/dist/SplitText";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Intro = () => {
-    const ref = useRef(null);
+    const intro = useRef(null);
 
     useEffect(() => {
-        const introElement = ref.current;
+        const introElem = intro.current;
 
-        const titles = introElement.querySelectorAll(".title-lg");
+        const titles = introElem.querySelectorAll(".title-lg");
 
         return () => {
             window.addEventListener("load", function () {
@@ -45,8 +44,8 @@ const Intro = () => {
     }, []);
 
     return (
-        <div className="intro" ref={ref}>
-            <div className="wrapper">
+        <div className="wrapper">
+            <div className="intro" ref={intro}>
                 <span className="title-lg">Hi, I’m Chai.</span>
                 <span className="title-lg">
                     I’m a front-end engineer with a background in design.

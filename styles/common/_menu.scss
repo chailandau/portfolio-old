@@ -3,16 +3,16 @@
     justify-content: space-between;
     align-items: baseline;
     button.logo-btn {
-        z-index: 99999;
+        z-index: 20;
     }
     nav {
         position: absolute;
         left: 0;
         top: 0;
-        background-color: $white;
+        background-color: $grey;
         width: 100vw;
         height: 100vh;
-        z-index: 999;
+        z-index: 5;
         padding: rem(125) rem(25) 0 rem(25);
         @include laptop {
             position: unset;
@@ -37,7 +37,6 @@
                 text-transform: uppercase;
                 @include font(45, 2, 68);
                 position: relative;
-                @include after-line;
                 @include laptop {
                     &:after {
                         display: none;
@@ -61,6 +60,27 @@
                         margin-top: 0;
                     }
                 }
+                a {
+                    position: relative;
+                    padding: rem(15) rem(5) rem(32) rem(5);
+                    &:after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: rem(5);
+                        bottom: 0;
+                        left: 0;
+                        z-index: -1;
+                        background: $blurple;
+                        @include basic-anim;
+                    }
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
@@ -72,7 +92,7 @@
         right: rem(24);
         width: rem(48);
         height: rem(19);
-        z-index: 9999;
+        z-index: 10;
         @include laptop {
             display: none;
         }
@@ -80,7 +100,7 @@
             &.line {
                 display: block;
                 width: 100%;
-                height: rem(1);
+                height: rem(2);
                 position: absolute;
                 transform: translateY(0) rotate(0deg);
                 transition: all 400ms ease-in-out;
@@ -97,6 +117,9 @@
             }
         }
         &:focus {
+            outline: none;
+        }
+        &:focus-visible {
             outline: rem(5) auto Highlight;
             outline: -webkit-focus-ring-color auto rem(5);
             outline-offset: rem(2);
@@ -128,7 +151,7 @@ html.nav-open {
                         opacity: 0;
                     }
                     &.bottom {
-                        transform: translateY(-10px) rotate(-24deg);
+                        transform: translateY(-9px) rotate(-24deg);
                     }
                 }
             }

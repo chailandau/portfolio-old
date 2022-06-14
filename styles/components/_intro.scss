@@ -1,17 +1,10 @@
 .intro {
     padding: rem(50) 0;
-    display: flex;
-    align-items: center;
-    @include laptop {
-        height: calc(100vh - 110px);
-    }
+
     span {
         display: block;
     }
     .split-parent {
         overflow: hidden;
-    }
-    .wrapper {
-        margin: unset;
     }
 }

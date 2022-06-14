@@ -1,5 +1,5 @@
 html {
-    background-color: $white;
+    background-color: $grey;
     color: $black;
     @include neue-montreal-medium;
 }
@@ -56,4 +56,18 @@ p {
 // misc
 section {
     position: relative;
+}
+
+// page specific
+#intro {
+    display: flex;
+    align-items: center;
+    max-width: rem(1440);
+    margin: auto;
+    @include laptop {
+        height: calc(100vh - 110px);
+    }
+    .wrapper {
+        margin: unset;
+    }
 }

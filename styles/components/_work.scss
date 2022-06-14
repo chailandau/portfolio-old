@@ -1,12 +1,20 @@
 .work {
-    margin-top: rem(-20);
-
-    @include laptop {
-        margin-top: rem(-100);
+    .title {
+        padding-top: rem(25);
+        width: 100%;
+        margin: auto;
+        z-index: 1;
+        padding: unset;
+        margin: unset;
+        position: absolute;
+        top: 0;
+        text-decoration: underline;
     }
-
     &-indiv {
-        margin-top: rem(60);
+        @include laptop {
+            height: 100vh;
+            display: flex;
+        }
         position: relative;
         .info {
             @include laptop {
@@ -20,11 +28,11 @@
             box-shadow: rem(3) rem(3) rem(20) 0 rgba(0, 0, 0, 0.15);
             position: relative;
             border-radius: rem(18) rem(18) rem(12) rem(12);
-            border-top: rem(32) solid;
+            border-top: rem(32) solid $grey;
             margin: rem(40) 0;
             @include laptop {
                 margin: unset;
-                border-top: rem(50) solid;
+                border-top: rem(50) solid $grey;
                 border-radius: rem(25) rem(25) rem(12) rem(12);
             }
             &:before {
@@ -56,8 +64,21 @@
             }
         }
         & + .work-indiv {
-            @include before-line;
             padding-top: rem(40);
+        }
+        .wrapper {
+            margin: auto auto 0 auto;
+        }
+    }
+    &.pinned {
+        .title {
+            position: fixed;
+        }
+        &-last {
+            .title {
+                top: unset;
+                bottom: calc(100vh - 60px);
+            }
         }
     }
 }

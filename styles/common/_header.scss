@@ -1,17 +1,16 @@
 header {
     padding: rem(30) 0;
     position: relative;
-    @include after-line;
     &:after {
-        z-index: 9999;
+        z-index: 10;
     }
 
     .logo {
         height: rem(35);
         width: auto;
-        z-index: 9999;
+        z-index: 10;
         path {
-            fill: $blurple;
+            fill: $black;
         }
         @include laptop {
             height: rem(40);

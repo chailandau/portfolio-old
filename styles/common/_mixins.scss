@@ -1,6 +1,3 @@
-// set base font size
-$base-font-size: 16;
-
 // to rem
 $rem: 16;
 @function rem($val) {
@@ -9,9 +6,9 @@ $rem: 16;
 
 // font size, tracking, leading
 @mixin font($font-size, $tracking, $leading) {
-    font-size: ($font-size / $base-font-size) * 1rem;
+    font-size: ($font-size / $rem) * 1rem;
     letter-spacing: $tracking + px;
-    line-height: ($leading / $base-font-size) * 1rem;
+    line-height: ($leading / $rem) * 1rem;
 }
 
 // animated underline on hover
@@ -31,34 +28,9 @@ $rem: 16;
     }
 }
 
-// before element line
-@mixin before-line {
-    &:before {
-        display: block;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: rem(1);
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: $black;
-    }
-}
-
-// after element line
-@mixin after-line {
-    &:after {
-        display: block;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: rem(1);
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        background: $black;
-    }
+// basic animation
+@mixin basic-anim {
+    transition: all 400ms ease-in-out;
 }
 
 // media queries

@@ -2,8 +2,6 @@
     position: relative;
     padding: rem(30) 0;
     margin: rem(60) 0;
-    @include before-line;
-    @include after-line;
     @include laptop {
         padding: rem(50) 0;
         margin: rem(125) 0;
