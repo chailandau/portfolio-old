@@ -46,9 +46,11 @@ const Intro = () => {
     return (
         <div className="wrapper">
             <div className="intro" ref={intro}>
-                <span className="title-lg">Hi, I’m Chai.</span>
                 <span className="title-lg">
-                    I’m a front-end engineer with a background in design.
+                    Hi, I’m <strong>Chai.</strong>
+                </span>
+                <span className="title-lg">
+                    I’m a front-end <strong>engineer</strong> with a background in design.
                 </span>
             </div>
         </div>

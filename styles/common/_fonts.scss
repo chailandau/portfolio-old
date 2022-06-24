@@ -1,6 +1,79 @@
 // add fonts
 
 @font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Black.woff2") format("woff2"),
+        url("/fonts/Archivo-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-ExtraBold.woff2") format("woff2"),
+        url("/fonts/Archivo-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Bold.woff2") format("woff2"),
+        url("/fonts/Archivo-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-SemiBold.woff2") format("woff2"),
+        url("/fonts/Archivo-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Medium.woff2") format("woff2"),
+        url("/fonts/Archivo-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Regular.woff2") format("woff2"),
+        url("/fonts/Archivo-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Light.woff2") format("woff2"),
+        url("/fonts/Archivo-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-ExtraLight.woff2") format("woff2"),
+        url("/fonts/Archivo-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("/fonts/Archivo-Thin.woff2") format("woff2"),
+        url("/fonts/Archivo-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Neue Montreal";
     src: url("/fonts/NeueMontreal-Regular.woff2") format("woff2"),
         url("/fonts/NeueMontreal-Regular.woff") format("woff");
@@ -28,6 +101,43 @@
 }
 
 // font mixins
+@mixin archivo-thin {
+    font-family: "Archivo", sans-serif;
+    font-weight: 100;
+}
+@mixin archivo-extralight {
+    font-family: "Archivo", sans-serif;
+    font-weight: 200;
+}
+@mixin archivo-light {
+    font-family: "Archivo", sans-serif;
+    font-weight: 300;
+}
+@mixin archivo-regular {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+}
+@mixin archivo-medium {
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+}
+@mixin archivo-semibold {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+}
+@mixin archivo-bold {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+}
+@mixin archivo-extrabold {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+}
+@mixin archivo-black {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+}
+
 @mixin neue-montreal {
     font-family: "Neue Montreal", sans-serif;
     font-weight: 400;

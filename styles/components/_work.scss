@@ -1,14 +1,12 @@
 .work {
-    .title {
-        padding-top: rem(25);
+    h2 {
         width: 100%;
         margin: auto;
         z-index: 1;
         padding: unset;
         margin: unset;
         position: absolute;
-        top: 0;
-        text-decoration: underline;
+        top: rem(25);
     }
     &-indiv {
         @include laptop {
@@ -71,11 +69,11 @@
         }
     }
     &.pinned {
-        .title {
+        h2 {
             position: fixed;
         }
         &-last {
-            .title {
+            h2 {
                 top: unset;
                 bottom: calc(100vh - 60px);
             }

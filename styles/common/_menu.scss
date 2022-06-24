@@ -33,7 +33,7 @@
                 justify-content: space-between;
             }
             li {
-                @include neue-montreal-medium;
+                @include archivo-medium;
                 text-transform: uppercase;
                 @include font(45, 2, 68);
                 position: relative;

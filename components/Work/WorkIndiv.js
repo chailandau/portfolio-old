@@ -5,7 +5,7 @@ const WorkIndiv = (props) => {
     const [mobile, setMobile] = useState(false);
 
     useEffect(() => {
-        const mobileBreakpoint = window.matchMedia("(max-width: 1199px)");
+        const mobileBreakpoint = window.matchMedia("(max-width: 991px)");
 
         const rearrangeMobile = () => {
             if (mobileBreakpoint.matches) {

@@ -13,7 +13,8 @@ const Work = () => {
 
         return () => {
             window.addEventListener("load", function () {
-                const workTitle = workDivElem.querySelector(".title");
+                const workTitle = workDivElem.querySelector("h2");
+                const html = document.querySelector("html");
                 console.log(workTitle);
 
                 gsap.from(workDivElem, {
@@ -22,11 +23,25 @@ const Work = () => {
                         end: "bottom bottom",
                         trigger: workDivElem,
                         toggleClass: "pinned",
-                        onLeave: () => {
-                            workDivElem.classList.add("pinned-last");
+                        onEnter: () => {
+                            html.classList.add("work-pinned");
+                            console.log("enter");
                         },
+
                         onEnterBack: () => {
                             workDivElem.classList.remove("pinned-last");
+                            html.classList.add("work-pinned");
+                            console.log("enter-back");
+                        },
+                        onLeave: () => {
+                            html.classList.remove("work-pinned");
+                            workDivElem.classList.add("pinned-last");
+                            console.log("leave");
+                        },
+                        onLeaveBack: () => {
+                            workDivElem.classList.remove("pinned-last");
+                            html.classList.remove("work-pinned");
+                            console.log("leave-back");
                         },
                     },
                 });
@@ -35,7 +50,9 @@ const Work = () => {
     }, []);
     return (
         <div className="work" ref={workDiv}>
-            <Title text="Recent Work" />
+            <div className="wrapper">
+                <Title text="Recent Work" />
+            </div>
 
             <WorkIndiv
                 title="Half Moon Tavern"

@@ -1,7 +1,15 @@
 html {
     background-color: $grey;
     color: $black;
-    @include neue-montreal-medium;
+    @include archivo-regular;
+    &.work-pinned {
+        scroll-snap-type: y mandatory;
+        .work {
+            &-indiv {
+                scroll-snap-align: start;
+            }
+        }
+    }
 }
 
 .wrapper {
@@ -17,21 +25,26 @@ html {
 
 .title {
     &-sm {
+        @include archivo-black;
         @include font(25, 0, 30);
         @include laptop {
             @include font(30, 0, 36);
         }
     }
     &-md {
+        @include archivo-black;
         @include font(32, 0, 38);
-
         @include laptop {
             @include font(50, 0, 60);
         }
     }
     &-lg {
         @include font(45, 0, 50);
+
         @include laptop {
+            @include font(75, 0, 85);
+        }
+        @include desktop-sm {
             @include font(100, 0, 110);
         }
         & + .title-lg {
@@ -41,11 +54,19 @@ html {
 }
 
 p {
-    @include neue-montreal;
+    @include archivo-light;
     @include font(20, 0, 32);
     @include laptop {
         @include font(25, 0, 37);
     }
+    a {
+        @include archivo-bold;
+        text-decoration: underline;
+    }
+}
+
+strong {
+    @include archivo-black;
 }
 
 .tag {
