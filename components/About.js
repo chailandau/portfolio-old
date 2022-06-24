@@ -8,13 +8,15 @@ const About = () => {
                 <Title text="About" />
                 <div className="grid">
                     <div className="headshot">
-                        <Image
-                            src="/img/headshot-web-color-4.jpg"
-                            alt="photo of smiling woman with glasses"
-                            layout="responsive"
-                            height="600"
-                            width="600"
-                        />
+                        <div className="image">
+                            <Image
+                                src="/img/headshot-web-color.jpg"
+                                alt="photo of smiling woman with glasses"
+                                layout="responsive"
+                                width="1200"
+                                height="764"
+                            />
+                        </div>
                     </div>
                     <div className="text">
                         <span className="title-sm">

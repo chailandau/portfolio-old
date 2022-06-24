@@ -1,10 +1,18 @@
+import Image from "next/image";
+
 const ToolIndiv = (props) => {
     return (
         <div className="tool">
             <div className="icon">
-                <img src={props.icon} alt={props.alt} />
+                <Image
+                    src={props.icon}
+                    layout="intrinsic"
+                    alt={props.alt}
+                    height="150"
+                    width="152"
+                />
             </div>
-            <div className="tool_name">{props.name}</div>
+            <div className="name">{props.name}</div>
         </div>
     );
 };

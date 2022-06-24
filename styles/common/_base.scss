@@ -3,10 +3,14 @@ html {
     color: $black;
     @include archivo-regular;
     &.work-pinned {
-        scroll-snap-type: y mandatory;
+        @include laptop {
+            scroll-snap-type: y mandatory;
+        }
         .work {
             &-indiv {
-                scroll-snap-align: start;
+                @include laptop {
+                    scroll-snap-align: start;
+                }
             }
         }
     }
@@ -79,7 +83,7 @@ section {
     position: relative;
 }
 
-// page specific
+// section specific
 #intro {
     display: flex;
     align-items: center;

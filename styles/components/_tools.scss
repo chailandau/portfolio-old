@@ -1,8 +1,33 @@
 .tools {
+    padding: rem(150) 0;
     .grid {
         display: grid;
-        grid-template-columns:
-            minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
-            minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: rem(20);
+        row-gap: rem(50);
+        @include laptop {
+            grid-template-columns:
+                minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+                minmax(0, 1fr) minmax(0, 1fr);
+            column-gap: rem(50);
+        }
+
+        .tool {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .icon,
+            .name {
+                width: 100%;
+            }
+            .icon {
+                max-width: rem(65);
+                height: rem(65);
+            }
+            .name {
+                margin-top: rem(20);
+                text-align: center;
+            }
+        }
     }
 }
